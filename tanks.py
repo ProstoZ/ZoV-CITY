@@ -56,14 +56,14 @@ class Castle():
 
 		global sprites
 
-		# images
+		# изображения
 		self.img_undamaged = sprites.subsurface(0, 15*2, 16*2, 16*2)
 		self.img_destroyed = sprites.subsurface(16*2, 15*2, 16*2, 16*2)
 
-		# init position
+		# Начальная позиция
 		self.rect = pygame.Rect(12*16, 24*16, 32, 32)
 
-		# start w/ undamaged and shiny castle
+		# Старт с неповрежденной крепостью
 		self.rebuild()
 
 	def draw(self):
@@ -134,13 +134,13 @@ class Bonus():
 		self.image = sprites.subsurface(16*2*self.bonus, 32*2, 16*2, 15*2)
 
 	def draw(self):
-		""" draw bonus """
+		""" Отрисовка бонусов"""
 		global screen
 		if self.visible:
 			screen.blit(self.image, self.rect.topleft)
 
 	def toggleVisibility(self):
-		""" Toggle bonus visibility """
+		""" Переключатель видимости бонусов """
 		self.visible = not self.visible
 
 
